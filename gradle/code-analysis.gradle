@@ -14,8 +14,9 @@ apply plugin: org.sonarqube.gradle.SonarQubePlugin
 sonarqube {
     properties {
         property 'sonar.host.url', 'https://sonarcloud.io'
-        property 'sonar.organization', 'demoorg123'
+        property 'sonar.organization', 'abhimanyujenkins'
         property 'sonar.login', System.getenv('SONAR_LOGIN')
+        property 'sonar.projectKey' , 'todo-spring-boot-abhi'
         properties['sonar.tests'] += sourceSets.integrationTest.java.srcDirs
     }
 }
