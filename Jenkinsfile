@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Long-running Verification') {
             environment {
-                SONAR_LOGIN = credentials('SONAR_LOGIN')
+                SONAR_LOGIN = credentials('chandan-sonar-todo')
             }
             parallel {
                 stage('Integration Tests') {
